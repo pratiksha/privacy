@@ -111,12 +111,17 @@ def generate_ours_offline(keep, scores, check_keep, check_scores, in_size=100000
     dat_in = []
     dat_out = []
 
+    # for each data point
     for j in range(scores.shape[1]):
+        # look for which models included j, and which ones did not include j in training
         dat_in.append(scores[keep[:, j], j, :])
         dat_out.append(scores[~keep[:, j], j, :])
 
     out_size = min(min(map(len,dat_out)), out_size)
 
+    # we only keep the scores of models that did not include each data point
+    # this simulates training an attack with no samples from the test/query distribution
+    # for simplicity we just keep the min number of models even though some points may have more models
     dat_out = np.array([x[:out_size] for x in dat_out])
 
     mean_out = np.median(dat_out, 1)
@@ -129,6 +134,7 @@ def generate_ours_offline(keep, scores, check_keep, check_scores, in_size=100000
     prediction = []
     answers = []
     for ans, sc in zip(check_keep, check_scores):
+        # TODO: try changing this to cdf, as in the paper.
         score = scipy.stats.norm.logpdf(sc, mean_out, std_out+1e-30)
 
         prediction.extend(score.mean(1))

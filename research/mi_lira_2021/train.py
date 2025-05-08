@@ -67,7 +67,8 @@ class TrainLoop(objax.Module):
             if jn.isnan(v):
                 raise ValueError('NaN, try reducing learning rate', k)
             if summary is not None:
-                summary.scalar(k, float(v))
+                summary.scalar(k, float(np.asarray(v).item()))
+#                summary.scalar(k, float(v))
 
     def train(self, num_train_epochs: int, train_size: int, train: DataSet, test: DataSet, logdir: str, save_steps=100, patience=None):
         """
@@ -174,7 +175,7 @@ def network(arch: str):
         return functools.partial(wide_resnet.WideResNet, depth=28, width=10)
     raise ValueError('Architecture not recognized', arch)
 
-def get_data(seed):
+def get_data(seed, exclude_class=None, include_one_example=False):
     """
     This is the function to generate subsets of the data for training models.
 
@@ -215,11 +216,18 @@ def get_data(seed):
     if FLAGS.num_experiments is not None:
         np.random.seed(0)
         keep = np.random.uniform(0,1,size=(FLAGS.num_experiments, FLAGS.dataset_size))
-        order = keep.argsort(0)
-        keep = order < int(FLAGS.pkeep * FLAGS.num_experiments)
+        order = keep.argsort(0) # rank ordering of sampled values.
+        keep = order < int(FLAGS.pkeep * FLAGS.num_experiments) # keep in this many experiments.
+
+        if (FLAGS.expid < FLAGS.num_experiments - 1) and exclude_class is not None:
+            # Final model will be used as test/target model.
+            keep[:,np.where(labels == exclude_class)] = 0
+            
         keep = np.array(keep[FLAGS.expid], dtype=bool)
     else:
         keep = np.random.uniform(0, 1, size=FLAGS.dataset_size) <= FLAGS.pkeep
+        if exclude_class is not None:
+            keep[:,np.where(labels == exclude_class)] = 0
 
     if FLAGS.only_subset is not None:
         keep[FLAGS.only_subset:] = 0
@@ -248,7 +256,7 @@ def get_data(seed):
 def main(argv):
     del argv
     tf.config.experimental.set_visible_devices([], "GPU")
-
+    
     seed = FLAGS.seed
     if seed is None:
         import time
@@ -283,7 +291,7 @@ def main(argv):
     if not os.path.exists(logdir):
         os.makedirs(logdir)
 
-    train, test, xs, ys, keep, nclass = get_data(seed)
+    train, test, xs, ys, keep, nclass = get_data(seed, FLAGS.exclude_class)
 
     # Define the network and train_it
     tm = MemModule(network(FLAGS.arch), nclass=nclass,
@@ -306,8 +314,6 @@ def main(argv):
     tm.train(FLAGS.epochs, len(xs), train, test, logdir,
              save_steps=FLAGS.save_steps, patience=FLAGS.patience)
 
-
-
 if __name__ == '__main__':
     flags.DEFINE_string('arch', 'cnn32-3-mean', 'Model architecture.')
     flags.DEFINE_float('lr', 0.1, 'Learning rate.')
@@ -328,5 +334,6 @@ if __name__ == '__main__':
     flags.DEFINE_integer('save_steps', 10, 'how often to get save model.')
     flags.DEFINE_integer('patience', None, 'Early stopping after this many epochs without progress')
     flags.DEFINE_bool('tunename', False, 'Use tune name?')
+    flags.DEFINE_integer('exclude_class', None, 'Class to exclude from training (0-9 for CIFAR-10)')
+    flags.DEFINE_bool('include_one_example', False, 'Include one example from excluded class')
     app.run(main)
-
