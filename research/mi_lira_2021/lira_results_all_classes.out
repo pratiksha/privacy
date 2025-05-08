@@ -1,0 +1,50 @@
+Class 0
+Attack Shadow models (offline, fixed variance, class 0)
+   AUC 0.5242, Accuracy 0.5364, TPR@1%FPR 0.0527, TPR@0.1%FPR 0.0197
+Attack Global threshold, class 0
+   AUC 0.6170, Accuracy 0.6090, TPR@1%FPR 0.0145, TPR@0.1%FPR 0.0000
+Class 1
+Attack Shadow models (offline, fixed variance, class 1)
+   AUC 0.5302, Accuracy 0.5321, TPR@1%FPR 0.0543, TPR@0.1%FPR 0.0229
+Attack Global threshold, class 1
+   AUC 0.5234, Accuracy 0.5600, TPR@1%FPR 0.0048, TPR@0.1%FPR 0.0004
+Class 2
+Attack Shadow models (offline, fixed variance, class 2)
+   AUC 0.5856, Accuracy 0.5760, TPR@1%FPR 0.1218, TPR@0.1%FPR 0.0561
+Attack Global threshold, class 2
+   AUC 0.6243, Accuracy 0.6260, TPR@1%FPR 0.0107, TPR@0.1%FPR 0.0000
+Class 3
+Attack Shadow models (offline, fixed variance, class 3)
+   AUC 0.6261, Accuracy 0.6124, TPR@1%FPR 0.1262, TPR@0.1%FPR 0.0588
+Attack Global threshold, class 3
+   AUC 0.6743, Accuracy 0.6737, TPR@1%FPR 0.0063, TPR@0.1%FPR 0.0008
+Class 4
+Attack Shadow models (offline, fixed variance, class 4)
+   AUC 0.5708, Accuracy 0.5615, TPR@1%FPR 0.0850, TPR@0.1%FPR 0.0366
+Attack Global threshold, class 4
+   AUC 0.6151, Accuracy 0.6174, TPR@1%FPR 0.0099, TPR@0.1%FPR 0.0008
+Class 5
+Attack Shadow models (offline, fixed variance, class 5)
+   AUC 0.5809, Accuracy 0.5744, TPR@1%FPR 0.0828, TPR@0.1%FPR 0.0366
+Attack Global threshold, class 5
+   AUC 0.6326, Accuracy 0.6411, TPR@1%FPR 0.0080, TPR@0.1%FPR 0.0008
+Class 6
+Attack Shadow models (offline, fixed variance, class 6)
+   AUC 0.5203, Accuracy 0.5398, TPR@1%FPR 0.0541, TPR@0.1%FPR 0.0180
+Attack Global threshold, class 6
+   AUC 0.5803, Accuracy 0.5898, TPR@1%FPR 0.0135, TPR@0.1%FPR 0.0016
+Class 7
+Attack Shadow models (offline, fixed variance, class 7)
+   AUC 0.5245, Accuracy 0.5306, TPR@1%FPR 0.0540, TPR@0.1%FPR 0.0195
+Attack Global threshold, class 7
+   AUC 0.5881, Accuracy 0.6055, TPR@1%FPR 0.0085, TPR@0.1%FPR 0.0000
+Class 8
+Attack Shadow models (offline, fixed variance, class 8)
+   AUC 0.5385, Accuracy 0.5445, TPR@1%FPR 0.0571, TPR@0.1%FPR 0.0209
+Attack Global threshold, class 8
+   AUC 0.5410, Accuracy 0.5586, TPR@1%FPR 0.0088, TPR@0.1%FPR 0.0004
+Class 9
+Attack Shadow models (offline, fixed variance, class 9)
+   AUC 0.5296, Accuracy 0.5278, TPR@1%FPR 0.0501, TPR@0.1%FPR 0.0210
+Attack Global threshold, class 9
+   AUC 0.5496, Accuracy 0.5733, TPR@1%FPR 0.0093, TPR@0.1%FPR 0.0020

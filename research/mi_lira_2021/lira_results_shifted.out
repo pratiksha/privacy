@@ -1,0 +1,108 @@
+Analyzing membership inference for class 0
+Loaded data for class 0: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False, False,  True, ...,  True, False, False])]
+Shadow models (offline, fixed variance, class 0)
+ 0.5805340186734049 0.5604645566282396 0.035829307568438
+Attack Shadow models (offline, fixed variance, class 0)
+   AUC 0.5805, Accuracy 0.5605, TPR@1%FPR of 0.0809, TPR@0.1%FPR of 0.0358
+Global threshold, class 0
+ 0.6202590058088778 0.6073416767150783 0.00040257648953301127
+Attack Global threshold, class 0
+   AUC 0.6203, Accuracy 0.6073, TPR@1%FPR of 0.0097, TPR@0.1%FPR of 0.0004
+Analyzing membership inference for class 1
+Loaded data for class 1: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False, False,  True, ...,  True, False,  True])]
+Shadow models (offline, fixed variance, class 1)
+ 0.5356862617092796 0.5358069066508964 0.016908212560386472
+Attack Shadow models (offline, fixed variance, class 1)
+   AUC 0.5357, Accuracy 0.5358, TPR@1%FPR of 0.0560, TPR@0.1%FPR of 0.0169
+Global threshold, class 1
+ 0.5233259154294959 0.5510235299237858 0.0008051529790660225
+Attack Global threshold, class 1
+   AUC 0.5233, Accuracy 0.5510, TPR@1%FPR of 0.0076, TPR@0.1%FPR of 0.0008
+Analyzing membership inference for class 2
+Loaded data for class 2: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False,  True,  True, ...,  True,  True, False])]
+Shadow models (offline, fixed variance, class 2)
+ 0.5638291506236304 0.5710358766665984 0.04378980891719745
+Attack Shadow models (offline, fixed variance, class 2)
+   AUC 0.5638, Accuracy 0.5710, TPR@1%FPR of 0.0939, TPR@0.1%FPR of 0.0438
+Global threshold, class 2
+ 0.6299225134147091 0.6346002211890962 0.0011942675159235668
+Attack Global threshold, class 2
+   AUC 0.6299, Accuracy 0.6346, TPR@1%FPR of 0.0139, TPR@0.1%FPR of 0.0012
+Analyzing membership inference for class 3
+Loaded data for class 3: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False,  True, False, ..., False, False, False])]
+Shadow models (offline, fixed variance, class 3)
+ 0.605814355702269 0.5961320863290467 0.030968247745981968
+Attack Shadow models (offline, fixed variance, class 3)
+   AUC 0.6058, Accuracy 0.5961, TPR@1%FPR of 0.1027, TPR@0.1%FPR of 0.0310
+Global threshold, class 3
+ 0.6752245214368412 0.6735723138541335 0.001960015680125441
+Attack Global threshold, class 3
+   AUC 0.6752, Accuracy 0.6736, TPR@1%FPR of 0.0086, TPR@0.1%FPR of 0.0020
+Analyzing membership inference for class 4
+Loaded data for class 4: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([ True, False, False, ..., False,  True, False])]
+Shadow models (offline, fixed variance, class 4)
+ 0.5412205690878314 0.540987926945564 0.02218570254724733
+Attack Shadow models (offline, fixed variance, class 4)
+   AUC 0.5412, Accuracy 0.5410, TPR@1%FPR of 0.0542, TPR@0.1%FPR of 0.0222
+Global threshold, class 4
+ 0.617075516952295 0.6220705182684123 0.003286770747740345
+Attack Global threshold, class 4
+   AUC 0.6171, Accuracy 0.6221, TPR@1%FPR of 0.0185, TPR@0.1%FPR of 0.0033
+Analyzing membership inference for class 5
+Loaded data for class 5: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False,  True, False, ..., False, False,  True])]
+Shadow models (offline, fixed variance, class 5)
+ 0.5677972732382683 0.5664040355651216 0.04905508644953759
+Attack Shadow models (offline, fixed variance, class 5)
+   AUC 0.5678, Accuracy 0.5664, TPR@1%FPR of 0.0921, TPR@0.1%FPR of 0.0491
+Global threshold, class 5
+ 0.6356336675343701 0.6397367384814086 0.0016083634901487736
+Attack Global threshold, class 5
+   AUC 0.6356, Accuracy 0.6397, TPR@1%FPR of 0.0105, TPR@0.1%FPR of 0.0016
+Analyzing membership inference for class 6
+Loaded data for class 6: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([ True, False, False, ..., False,  True,  True])]
+Shadow models (offline, fixed variance, class 6)
+ 0.519259005967372 0.5260375344425383 0.021703521703521703
+Attack Shadow models (offline, fixed variance, class 6)
+   AUC 0.5193, Accuracy 0.5260, TPR@1%FPR of 0.0504, TPR@0.1%FPR of 0.0217
+Global threshold, class 6
+ 0.5772924819054608 0.5947580425688322 0.0004095004095004095
+Attack Global threshold, class 6
+   AUC 0.5773, Accuracy 0.5948, TPR@1%FPR of 0.0045, TPR@0.1%FPR of 0.0004
+Analyzing membership inference for class 7
+Loaded data for class 7: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([False,  True, False, ...,  True, False,  True])]
+Shadow models (offline, fixed variance, class 7)
+ 0.5020818716969151 0.5248922016469335 0.01948051948051948
+Attack Shadow models (offline, fixed variance, class 7)
+   AUC 0.5021, Accuracy 0.5249, TPR@1%FPR of 0.0377, TPR@0.1%FPR of 0.0195
+Global threshold, class 7
+ 0.5989025884407391 0.6024794901470769 0.002029220779220779
+Attack Global threshold, class 7
+   AUC 0.5989, Accuracy 0.6025, TPR@1%FPR of 0.0101, TPR@0.1%FPR of 0.0020
+Analyzing membership inference for class 8
+Loaded data for class 8: (16, 5000, 2) scores, (16, 5000) keep values
+>>> 5000
+[array([ True,  True, False, ..., False, False, False])]
+Shadow models (offline, fixed variance, class 8)
+ 0.5201462241690049 0.5225681999713274 0.01045016077170418
+Attack Shadow models (offline, fixed variance, class 8)
+   AUC 0.5201, Accuracy 0.5226, TPR@1%FPR of 0.0358, TPR@0.1%FPR of 0.0105
+Global threshold, class 8
+ 0.5439909335511091 0.5635598644192763 0.0008038585209003215
+Attack Global threshold, class 8
+   AUC 0.5440, Accuracy 0.5636, TPR@1%FPR of 0.0080, TPR@0.1%FPR of 0.0008
